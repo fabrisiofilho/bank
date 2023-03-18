@@ -4,12 +4,14 @@ import thunkMiddleware from 'redux-thunk';
 import { accountSlice } from './reducers/account';
 import { transactionSlice } from './reducers/transaction';
 import { clientSlice } from './reducers/client';
+import { sessionSlice } from './reducers/session';
 
 export const store = configureStore ({
     reducer: {
         conta: accountSlice.reducer,
         movimentacao: transactionSlice.reducer,
-        pessoa: clientSlice.reducer
+        pessoa: clientSlice.reducer,
+        session: sessionSlice.reducer
     },
     middleware: [thunkMiddleware],
 });

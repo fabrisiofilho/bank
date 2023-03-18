@@ -33,11 +33,14 @@ export function CentralScreen ({}: CentralProps) {
             <CardStats countsContas={countsContas} countsMovimentacoes={countsMovimentacoes} countsPessoas={countsPessoas}></CardStats>
             <Grid container spacing={2} sx={{marginBottom: '30px'}}>
                 {
+                    contas.content ?
                     contas.content.map((conta) => (
                         <Grid item xs={6}>
                             <Card conta={conta}></Card>
                         </Grid>
                     ))
+                    :
+                    ''
                 }
             </Grid>
         </Stack>

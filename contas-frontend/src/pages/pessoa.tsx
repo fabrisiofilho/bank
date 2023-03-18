@@ -90,7 +90,7 @@ export function PessoaScreen ({}: PessoaProps) {
 
     return (
         <Stack position={'relative'} sx={{padding: '0px 50px'}} height={'calc(100vh - 70px)'}>
-            <Title title={"Pessoa"}></Title>
+            <Title title={"Titulares"}></Title>
             <TableCustom<Client>
                 values={[ 
                     {name: "Nome", type: TypeColumn.STRING, value: ["name"]}, 

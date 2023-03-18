@@ -4,6 +4,7 @@ import { PessoaScreen } from '../pages/pessoa';
 import { ContaScreen } from '../pages/conta';
 import { MovimentacaoScreen } from '../pages/movimentacao';
 import { CentralScreen } from '../pages/central';
+import { LoginScreen } from '../pages/login';
 
 export const routers = createBrowserRouter([
     {
@@ -27,5 +28,9 @@ export const routers = createBrowserRouter([
                 element: <MovimentacaoScreen/>
             },
         ]
-    }
+    },
+    {
+        path: "login",
+        element: <LoginScreen/>
+    },
   ]);
