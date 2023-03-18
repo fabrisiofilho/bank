@@ -12,7 +12,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <RouterProvider
           router={routers}
-        fallbackElement={<CircularProgress />} />
+          fallbackElement={<CircularProgress />} />
       </ThemeProvider>
     </Provider>
   )

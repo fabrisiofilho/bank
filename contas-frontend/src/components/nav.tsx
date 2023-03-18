@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MenuBank } from "./menu";
 import Logout from '@mui/icons-material/Logout';
+import { logout } from "../services/auth";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -128,9 +129,12 @@ export function Nav ({}: NavProps) {
                     Minha conta
                 </MenuItem>
                 <Divider />
-                <MenuItem>
+                <MenuItem onClick={() => {
+                    logout();
+                    navigate("/login");
+                }}>
                 <ListItemIcon>
-                    <Logout fontSize="small" />
+                    <Logout fontSize="small"/>
                 </ListItemIcon>
                     Sair
                 </MenuItem>

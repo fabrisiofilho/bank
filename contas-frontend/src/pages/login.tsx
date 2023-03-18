@@ -27,8 +27,7 @@ export function LoginScreen ({}: LoginProps) {
     const navigate = useNavigate();
 
     function cadastrar(data: Login) {
-        dispatch(login(data)).then((res) => {
-            console.log(res.payload.token);
+        dispatch(login(data)).then(() => {
             navigate("/");
         })
     }
